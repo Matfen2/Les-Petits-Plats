@@ -1,20 +1,20 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 OPR/118.0.0.0" version="27.0.5">
   <diagram name="Page-1" id="0HzvhvutgTsOn6cmMFNH">
-    <mxGraphModel dx="1106" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1626" dy="901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="4GBahTI-NEpN_6EvRels-1" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="20" width="120" height="60" as="geometry" />
+          <mxGeometry x="370" y="30" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="4GBahTI-NEpN_6EvRels-2" value="" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=#A3A3A3;" vertex="1" parent="1">
-          <mxGeometry x="360" y="115" width="140" height="40" as="geometry" />
+        <mxCell id="4GBahTI-NEpN_6EvRels-2" value="" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=#A3A3A3;textShadow=0;labelBorderColor=none;fillColor=#ABABAB;" vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="140" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="4GBahTI-NEpN_6EvRels-5" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Main Search Input&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+        <mxCell id="4GBahTI-NEpN_6EvRels-5" value="&lt;font style=&quot;font-size: 14px; color: rgb(255, 255, 255);&quot;&gt;Main Search Input&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="380" y="130" width="100" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="4GBahTI-NEpN_6EvRels-6" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Début&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
-          <mxGeometry x="405" y="47.5" width="50" height="5" as="geometry" />
+        <mxCell id="4GBahTI-NEpN_6EvRels-6" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Début&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="405" y="43.75" width="50" height="12.5" as="geometry" />
         </mxCell>
         <mxCell id="4GBahTI-NEpN_6EvRels-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4GBahTI-NEpN_6EvRels-1" target="4GBahTI-NEpN_6EvRels-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -23,7 +23,263 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="4GBahTI-NEpN_6EvRels-9" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;query =&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
-          <mxGeometry x="340" y="170" width="50" height="5" as="geometry" />
+          <mxGeometry x="370" y="165" width="50" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-10" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#1ba1e2;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="162.5" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-11" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;User typing&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="430" y="160" width="100" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.499;entryY=0.058;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="4GBahTI-NEpN_6EvRels-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="429.81" y="155" as="sourcePoint" />
+            <mxPoint x="429.81" y="195" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="429.81" y="165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-14" value="" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;labelBackgroundColor=#FF0000;fillColor=#FFA3A3;" vertex="1" parent="1">
+          <mxGeometry x="363.34" y="200" width="133.33" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-15" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;query &amp;gt;= 3 characters&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="385" y="230" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-16" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="240" as="sourcePoint" />
+            <mxPoint x="630" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-17" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFC1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="280" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-18" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;return = recipes&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;don&#39;t move&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="582.5" y="300" width="95" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-20" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.009;exitY=0.505;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="4GBahTI-NEpN_6EvRels-14" target="4GBahTI-NEpN_6EvRels-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="240" as="sourcePoint" />
+            <mxPoint x="210" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-21" value="" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;labelBackgroundColor=#FF0000;fillColor=#FFA3A3;" vertex="1" parent="1">
+          <mxGeometry x="140" y="280" width="133.33" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-22" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;recipes.filter&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="161.67" y="310" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-23" value="" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="360" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-24" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;name || ingredient || description =&amp;gt; include userQuery&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="380" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-25" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="390" as="sourcePoint" />
+            <mxPoint x="377" y="440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-26" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4GBahTI-NEpN_6EvRels-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="400" as="sourcePoint" />
+            <mxPoint x="50" y="440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="50" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-27" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFC1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="440" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-28" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;return = &quot;Aucune recette ne contient&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;&#39;XXX&#39; vous pouvez chercher &amp;lt;&amp;lt;Tarte&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;aux pommes&amp;gt;&amp;gt;, &amp;lt;&amp;lt;Poissons&amp;gt;&amp;gt;, etc&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;spacing=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="480" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-29" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFC1;" vertex="1" parent="1">
+          <mxGeometry x="23.75" y="440" width="137.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-30" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;return = filtered recipes&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="45" y="460" width="95" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-32" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.191;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="4GBahTI-NEpN_6EvRels-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="570" as="sourcePoint" />
+            <mxPoint x="140" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="50" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-33" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#787878;" vertex="1" parent="1">
+          <mxGeometry x="140" y="580" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-34" value="" style="triangle;whiteSpace=wrap;html=1;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="146.27" y="599.37" width="25.61" height="18.13" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-35" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;The advanced search&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;fields are updated&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="185" y="604.69" width="95" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-36" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="4GBahTI-NEpN_6EvRels-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="301.01" y="540" as="sourcePoint" />
+            <mxPoint x="300" y="613" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="385" y="613" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-39" value="" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;labelBackgroundColor=#FF0000;fillColor=#FFA3A3;" vertex="1" parent="1">
+          <mxGeometry x="153.33" y="640" width="133.33" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-40" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;User choice select&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="175" y="670" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-41" value="" style="line;strokeWidth=2;direction=south;html=1;" vertex="1" parent="1">
+          <mxGeometry x="215" y="720" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-42" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="225" y="730" width="115" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-44" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="740" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-47" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#E26767;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="785" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-48" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="730" width="115" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-49" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="740" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-53" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#E26767;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="175" y="785" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-54" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#E26767;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="785" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-55" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Ingredients&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="790" width="90" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-56" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Ustencils&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="175" y="790" width="90" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-57" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Appliance&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="790" width="90" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-58" value="" style="line;strokeWidth=2;direction=south;html=1;" vertex="1" parent="1">
+          <mxGeometry x="215" y="820" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-59" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="810" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-60" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="225" y="840" width="115" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-61" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="810" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-62" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="101.57" y="840" width="115" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-64" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#1ba1e2;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="880" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-65" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;User typing&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="880" width="100" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-66" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;queryRefined =&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="96.26999999999998" y="885" width="50" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-67" value="" style="shape=cross;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="205" y="910" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-68" value="" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=2;hachureGap=8;fillColor=#FFFF38;fillStyle=dots;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="950" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-69" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;Select TAGS&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="960" width="100" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-70" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="219.8" y="990" as="sourcePoint" />
+            <mxPoint x="220" y="1010" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="219.8" y="1000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-71" value="" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;labelBackgroundColor=#FF0000;fillColor=#FFA3A3;" vertex="1" parent="1">
+          <mxGeometry x="153.33" y="1010" width="133.33" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-72" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;filteredRecipes.filter&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="171.88" y="1040" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-73" value="" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1090" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-74" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;ingredients [] || ustencils [] || appliances []&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;includes queryRefined&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="175" y="1120" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-75" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="219.8" y="1160" as="sourcePoint" />
+            <mxPoint x="220" y="1180" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-76" value="" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFFC1;" vertex="1" parent="1">
+          <mxGeometry x="151.25" y="1180" width="137.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-77" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;return = refined recipes&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="172.5" y="1200" width="95" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-78" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="1204.71" as="sourcePoint" />
+            <mxPoint x="390" y="1205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-79" value="" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;labelBackgroundColor=#FF0000;fillColor=#FFA3A3;" vertex="1" parent="1">
+          <mxGeometry x="390" y="1165" width="133.33" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-80" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;User Select Recipe&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="410" y="1195" width="90" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-81" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.tick;fillColor=#ADFFB2;" vertex="1" parent="1">
+          <mxGeometry x="446.67" y="1215" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-82" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="523.33" y="1205" as="sourcePoint" />
+            <mxPoint x="623.33" y="1205.29" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-83" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1179" width="120" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-84" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Fin&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="655" y="1195" width="50" height="12.5" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-85" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Yes&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="260" y="210" width="50" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-86" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Yes&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="50" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-87" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;No&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="210" width="50" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="4GBahTI-NEpN_6EvRels-88" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;No&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="340" y="370" width="50" height="5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
