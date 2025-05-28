@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import recipes from "../../data/recipes.js";
 import { mainSearch, applyFilters, initializeDropdowns } from "./searchFunctions.js";
 import { displayRecipes, updateRecipeCount, updateFilters, updateSelectOptions } from "./displayFunctions.js";
