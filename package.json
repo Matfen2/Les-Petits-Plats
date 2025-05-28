@@ -1,0 +1,25 @@
+{
+  "name": "les-petits-plats",
+  "version": "1.0.0",
+  "description": "Développez un algorithme de recherche en JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint scripts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matfen2/Les-Petits-Plats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matfen2/Les-Petits-Plats/issues"
+  },
+  "homepage": "https://github.com/Matfen2/Les-Petits-Plats#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0"
+  }
+}
