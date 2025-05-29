@@ -75,6 +75,7 @@ export function applyFilters(tags, container, query = "") {
 
     displayRecipes(filteredRecipes, container, query, tags);
     updateRecipeCount(filteredRecipes.length);
+    updateFilters(filteredRecipes);
 }
 
 //fonction pour collecter tous les ingrédients uniques
