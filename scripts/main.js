@@ -1,8 +1,8 @@
-import recipes from "../data/recipes.js";
+import recipes from "./../data/recipes.js";
 import { recipeCard } from "./templates/recipeCard.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    //récupération du conteneur html
+    //recup du conteneur html
     const recipesContainer = document.getElementById("recipes");
 
     //pour chaque recette dans recipes.js, on crée une carte (template)
