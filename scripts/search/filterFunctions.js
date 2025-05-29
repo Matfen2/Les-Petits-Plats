@@ -1,6 +1,5 @@
 import { addTag, updateSearch } from "./tagFunctions.js";
 
-// eslint-disable-next-line no-unused-vars
 let currentFilters = [];
 
 //fonction pour initialiser un dropdown avec les événements

@@ -4,6 +4,7 @@ import { setupDropdown } from "./filterFunctions.js";
 
 let searchResults = [];
 
+
 // Fonction principale pour effectuer la recherche
 export function mainSearch(query, container) {
     console.log("Recherche principale - Query:", query);
@@ -34,6 +35,7 @@ export function mainSearch(query, container) {
     updateRecipeCount(searchResults.length);
     updateFilters(searchResults);
 }
+
 
 //fonction pour initialiser chaque dropdown avec les données des recettes
 export function initializeDropdowns() {
@@ -72,7 +74,10 @@ export function applyFilters(tags, container, query = "") {
     displayRecipes(filteredRecipes, container, query, tags);
     //met à jour le nombre de recettes filtrées
     updateRecipeCount(filteredRecipes.length);
+    updateFilters(filteredRecipes);
 }
+
+
 
 //fonction pour collecter tous les ingrédients uniques
 function collectUniqueIngredients(recipes) {
