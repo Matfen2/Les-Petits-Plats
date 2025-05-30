@@ -1,10 +1,10 @@
 export function recipeCard(recipe) {
     return `
     <a href="#" class="rounded-xl basis-[31%] mt-8">
-        <div class="recipe bg-white rounded-xl flex flex-col h-[700px] shadow-lg">
-            <div class="relative flex-none h-[243px] overflow-hidden rounded-t-xl">
+        <div class="recipe bg-white rounded-xl flex flex-col h-[800px] shadow-lg">
+            <div class="relative flex-none h-[343px] overflow-hidden rounded-t-xl">
                 <img src="./assets/recipes/${recipe.image}" alt="${recipe.name}" class="object-cover w-full h-full">
-                <span class="absolute top-4 right-4 bg-yellow-300 px-2 py-1 rounded-full font-manrope text-md">${recipe.time} min</span>
+                <span class="absolute top-4 right-4 bg-yellow-300 px-4 py-1 rounded-full font-manrope text-xl">${recipe.time} min</span>
             </div>
             <div class="recipe-content p-8 flex-grow">
                 <div class="recipe-txt">

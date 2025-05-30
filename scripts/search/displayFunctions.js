@@ -51,26 +51,22 @@ export function updateRecipeCount(count) {
     countRecipe.textContent = `${count} recette(s)`;
 }
 
+// Met à jour dynamiquement les options visibles dans les dropdowns
 export function updateFilters(filteredRecipes) {
-    //initialisation des tableaux pour stocker les ingrédients, appareils et ustensiles
-    let ingredients = [];
-    let appliances = [];
-    let ustensils = [];
-    //extraction des ingrédients, appareils et ustensiles des recettes filtrée
+    let ingredients = [], appliances = [], ustensils = [];
+
     filteredRecipes.forEach(recipe => {
-        //ajout des ingrédients, ustensils et appareils dans leurs tableaux respectifs
-        recipe.ingredients.forEach(ingredient =>
-            ingredients.push(ingredient.ingredient.toLowerCase())
-        );
+        recipe.ingredients.forEach(ing => ingredients.push(ing.ingredient.toLowerCase()));
         appliances.push(recipe.appliance.toLowerCase());
-        recipe.ustensils.forEach(ustensil => ustensils.push(ustensil.toLowerCase()));
+        recipe.ustensils.forEach(u => ustensils.push(u.toLowerCase()));
     });
 
-    //élimination des doublons en utilisant des Set puis reconversion en tableau
+    // Suppression des doublons avec Set
     ingredients = [...new Set(ingredients)];
     appliances = [...new Set(appliances)];
     ustensils = [...new Set(ustensils)];
-    //mise à jour des options des filtres
+
+    // Mise à jour des listes déroulantes
     updateSelectOptions("ingredients-select", ingredients);
     updateSelectOptions("appliances-select", appliances);
     updateSelectOptions("ustensils-select", ustensils);

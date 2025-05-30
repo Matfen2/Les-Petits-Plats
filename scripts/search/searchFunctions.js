@@ -7,33 +7,29 @@ let searchResults = [];
 
 // Fonction principale pour effectuer la recherche
 export function mainSearch(query, container) {
-    console.log("Recherche principale - Query:", query);
+    // On part de toutes les recettes
     searchResults = recipes;
 
-    // Filtrer les recettes en fonction de la recherche principale (query)
+    // Si l'utilisateur tape au moins 3 caractères
     if (query.length >= 3) {
         const queryLower = query.trim().toLowerCase();
+
+        // Filtrage des recettes avec .filter()
+        // On cherche une correspondance dans : nom, description, ingrédients
         searchResults = recipes.filter(recipe => {
             const nameMatch = recipe.name.toLowerCase().includes(queryLower);
             const descriptionMatch = recipe.description.toLowerCase().includes(queryLower);
             const ingredientsMatch = recipe.ingredients.some(ingredient =>
                 ingredient.ingredient.toLowerCase().includes(queryLower)
             );
-
             return nameMatch || descriptionMatch || ingredientsMatch;
         });
-    } else {
-        // Si la longueur de query est inférieure à 3, affiche toutes les recettes
-        searchResults = recipes;
     }
 
-    console.log("Résultats après recherche principale:", searchResults);
-    console.log("mainSearch - Appel de displayRecipes avec query:", query);
-
-    // Afficher les recettes filtrées ou le message d'erreur
+    // Affichage des recettes ou message d'erreur si aucune
     displayRecipes(searchResults, container, query);
     updateRecipeCount(searchResults.length);
-    updateFilters(searchResults);
+    updateFilters(searchResults); // Met à jour les options des dropdowns
 }
 
 

@@ -4,50 +4,36 @@ let currentFilters = [];
 
 //fonction pour initialiser un dropdown avec les événements
 export function setupDropdown(dropdownId, selectId) {
-    //dom elements du seelct
-    const dropdownButton = document.getElementById(dropdownId);
-    const selectContainer = document.getElementById(selectId);
-    const input = selectContainer.querySelector(".select-input");
-    const options = selectContainer.querySelector(".select-options");
+    const dropdownButton = document.getElementById(dropdownId); // bouton cliquable
+    const selectContainer = document.getElementById(selectId); // menu déroulant
+    const input = selectContainer.querySelector(".select-input"); // champ texte interne
+    const options = selectContainer.querySelector(".select-options"); // liste d'options
 
-    //ajoute un événement 'click' au bouton de dropdown pour afficher/masquer le conteneur de sélection
+    // Lorsqu'on clique sur le bouton, on affiche/masque le menu
     dropdownButton.addEventListener("click", (event) => {
         event.preventDefault();
         selectContainer.classList.toggle("hidden");
         input.focus();
     });
-    //ajoute un événement 'input' à l'entrée de recherche pour filtrer les options
+
+    // Filtrage dynamique des options du dropdown quand on tape du texte
     input.addEventListener("input", (event) => {
         const query = event.target.value.toLowerCase();
-        //récupère toutes les options
         const allOptions = options.querySelectorAll("li");
         allOptions.forEach(option => {
-            //récupère le texte de l'option en minuscules
             const text = option.textContent.toLowerCase();
-            if (text.includes(query)) {
-                //affiche l'option si elle contient la query
-                option.classList.remove("hidden");
-            } else {
-                //masque l'option sinon
-                option.classList.add("hidden");
-            }
+            option.classList.toggle("hidden", !text.includes(query));
         });
     });
-    //ajoute un événement 'click' aux options pour gérer la sélection d'une option
+
+    // Sélection d'une option => ajoute un tag + relance la recherche
     options.addEventListener("click", (event) => {
-        //vérifie si l'élément cliqué est une option (LI)
         if (event.target.tagName === "LI") {
-            //récupère le texte de l'option sélectionnée en minuscules
             const selectedOption = event.target.textContent.toLowerCase();
-            //ajoute le tag correspondant à l'option sélectionnée
-            addTag(selectedOption);
-            //met à jour les filtres actifs
+            addTag(selectedOption); // fonction dans tagFunctions
             updateActiveFilters();
-            //met à jour la recherche
             updateSearch();
-            //masque le conteneur de sélection
             selectContainer.classList.add("hidden");
-            //vide l'entrée de recherche
             input.value = "";
         }
     });

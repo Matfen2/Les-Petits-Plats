@@ -2,30 +2,32 @@ import { applyFilters } from "./searchFunctions.js";
 import { updateActiveFilters } from "./filterFunctions.js";
 import { searchTag } from "../templates/tag.js";
 
+// Ajout d’un tag (ex: "concombre") dans l’interface
 export function addTag(tag) {
-    //element dom où les tags seront ajoutés
     const tagsContainer = document.getElementById("tags");
-    //tag converti en minuscule pour assurer une comparaison insensible à la casse
     const lowerTag = tag.toLowerCase();
-    //on vérifie si le tag existe déjà dans le conteneur
+
+    // Vérifie si ce tag est déjà sélectionné
     const existingTag = Array.from(tagsContainer.children).find(
         (element) => element.querySelector("p").textContent === lowerTag
     );
-    //ajout du tag s'il n'existe pas
+
+    // Si ce n'est pas le cas, on l’ajoute en HTML
     if (!existingTag) {
-        const tagHTML = searchTag(lowerTag);
+        const tagHTML = searchTag(lowerTag); // génère le HTML du tag
         tagsContainer.innerHTML += tagHTML;
-        //ajout de l'event clik sur chaque tag pour la suppression et mise à jour de la recherche
-        const tagElements = tagsContainer.querySelectorAll(".tag");
-        tagElements.forEach(tagElement => {
+
+        // Ajoute l'événement de suppression (clic sur croix)
+        tagsContainer.querySelectorAll(".tag").forEach(tagElement => {
             tagElement.querySelector("i").addEventListener("click", () => {
                 tagElement.remove();
-                updateSearch();
+                updateSearch(); // relance le filtre après suppression
             });
         });
-        //mise à jour des filtres actifs
-        updateActiveFilters(Array.from(tagsContainer.children).map(
-            (element) => element.querySelector("p").textContent.toLowerCase()
+
+        // Met à jour les filtres actifs (liste de tous les tags sélectionnés)
+        updateActiveFilters([...tagsContainer.children].map(
+            el => el.querySelector("p").textContent.toLowerCase()
         ));
     }
 }
