@@ -1,67 +1,67 @@
+// On importe les fonctions pour gérer les tags et relancer la recherche
 import { addTag, updateSearch } from "./tagFunctions.js";
 
+// Variable globale pour stocker les tags sélectionnés
 // eslint-disable-next-line no-unused-vars
 let currentFilters = [];
 
-//fonction pour initialiser un dropdown avec les événements
+// Fonction pour initialiser le comportement d’un menu déroulant
 export function setupDropdown(dropdownId, selectId) {
-    //dom elements du seelct
+    // Sélection des éléments HTML : bouton, container, champ input, et liste des options
     const dropdownButton = document.getElementById(dropdownId);
     const selectContainer = document.getElementById(selectId);
     const input = selectContainer.querySelector(".select-input");
     const options = selectContainer.querySelector(".select-options");
 
-    //ajoute un événement 'click' au bouton de dropdown pour afficher/masquer le conteneur de sélection
+    // Quand on clique sur le bouton de dropdown : on ouvre ou on ferme le menu
     dropdownButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        selectContainer.classList.toggle("hidden");
-        input.focus();
+        event.preventDefault(); // empêche le comportement par défaut (utile si dans un <form>)
+        selectContainer.classList.toggle("hidden"); // affiche ou masque le menu
+        input.focus(); // place automatiquement le curseur dans le champ de saisie
     });
-    //ajoute un événement 'input' à l'entrée de recherche pour filtrer les options
+
+    // Quand l’utilisateur tape dans le champ de recherche
     input.addEventListener("input", (event) => {
-        const query = event.target.value.toLowerCase();
-        //récupère toutes les options
-        const allOptions = options.querySelectorAll("li");
+        const query = event.target.value.toLowerCase(); // normalisation
+        const allOptions = options.querySelectorAll("li"); // on sélectionne toutes les options
+
+        // Pour chaque option, on vérifie si elle contient la requête
         allOptions.forEach(option => {
-            //récupère le texte de l'option en minuscules
-            const text = option.textContent.toLowerCase();
+            const text = option.textContent.toLowerCase(); // on récupère le texte en minuscule
+
             if (text.includes(query)) {
-                //affiche l'option si elle contient la query
-                option.classList.remove("hidden");
+                option.classList.remove("hidden"); // on l’affiche
             } else {
-                //masque l'option sinon
-                option.classList.add("hidden");
+                option.classList.add("hidden"); // on la masque sinon
             }
         });
     });
-    //ajoute un événement 'click' aux options pour gérer la sélection d'une option
+
+    // Si on clique sur une option du menu (élément LI)
     options.addEventListener("click", (event) => {
-        //vérifie si l'élément cliqué est une option (LI)
         if (event.target.tagName === "LI") {
-            //récupère le texte de l'option sélectionnée en minuscules
-            const selectedOption = event.target.textContent.toLowerCase();
-            //ajoute le tag correspondant à l'option sélectionnée
-            addTag(selectedOption);
-            //met à jour les filtres actifs
-            updateActiveFilters();
-            //met à jour la recherche
-            updateSearch();
-            //masque le conteneur de sélection
-            selectContainer.classList.add("hidden");
-            //vide l'entrée de recherche
-            input.value = "";
+            const selectedOption = event.target.textContent.toLowerCase(); // normalisation
+
+            addTag(selectedOption);         // Ajout visuel du tag
+            updateActiveFilters();          // Met à jour la variable `currentFilters`
+            updateSearch();                 // Relance la recherche filtrée
+            selectContainer.classList.add("hidden"); // on ferme le menu
+            input.value = "";               // on vide le champ de saisie
         }
     });
 }
 
-//mise à jour des filtres actifs
+// Fonction pour récupérer tous les tags sélectionnés visuellement dans l’interface
 export function updateActiveFilters() {
     const tagsContainer = document.getElementById("tags");
+
+    // On récupère le texte de chaque tag <p>, converti en minuscule
     currentFilters = Array.from(tagsContainer.children).map(
         (element) => element.querySelector("p").textContent.toLowerCase()
     );
 }
 
+// 🧹 Fonction pour vider la liste des filtres actifs (utile pour un reset)
 export function clearActiveFilters() {
     currentFilters = [];
 }
