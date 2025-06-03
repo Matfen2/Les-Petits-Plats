@@ -1,91 +1,79 @@
 import { recipeCard } from "../templates/recipeCard.js";
 
+// Affiche les recettes OU un message d’erreur s’il n’y en a aucune
 export function displayRecipes(recipesFound, container, query = "", tags = []) {
-    container.innerHTML = "";
-    console.log("Query dans displayRecipes:", query);
-    console.log("Tags dans displayRecipes:", tags);
-    console.log("Recipes trouvées:", recipesFound);
-    console.log(recipesFound.length);
+    container.innerHTML = ""; // réinitialisation du contenu
 
-    // Vérifier si aucune recette n'a été trouvée
+    // Cas : aucune recette trouvée
     if (recipesFound.length === 0) {
         let errorMessage = "";
-        console.log("displayRecipes - Aucune recette trouvée pour Query:", query);
 
-        // Cas 1: Aucun résultat pour la query seule
+        // Selon ce que l’utilisateur a saisi, on adapte le message
         if (query.length > 0 && tags.length === 0) {
             errorMessage = query;
-        }
-        // Cas 2: Aucun résultat pour la query avec des tags
-        else if (query.length > 0 && tags.length > 0) {
+        } else if (query.length > 0 && tags.length > 0) {
             errorMessage = `${query}, ${tags.join(', ')}`;
-        }
-        // Cas 3: Aucun résultat pour les tags seuls
-        else if (query.length === 0 && tags.length > 0) {
+        } else if (query.length === 0 && tags.length > 0) {
             errorMessage = tags.join(', ');
         }
 
-        // Affichage du message d'erreur
+        // On affiche un message personnalisé dans le DOM
         container.innerHTML = `
             <div class="no-recipes">
                 <p class="font-manrope text-2xl">Aucune recette ne contient '${errorMessage}', vous pouvez chercher 'tarte aux pommes', 'poisson', etc.</p>
             </div>
         `;
-        console.log(container.innerHTML);
     } else {
-        // Affichage des recettes trouvées
+        // Cas : recettes trouvées → on injecte chaque carte HTML
         recipesFound.forEach(recipe => {
             const cardHTML = recipeCard(recipe);
             container.innerHTML += cardHTML;
         });
     }
 
-    // Mise à jour du compteur de recettes
+    // Mise à jour du compteur en bas du champ de recherche
     const countRecipe = document.getElementById("recipe-count");
     countRecipe.textContent = `${recipesFound.length} recette(s)`;
 }
 
-
+// Met à jour seulement le compteur sans réafficher les cartes
 export function updateRecipeCount(count) {
     const countRecipe = document.getElementById("recipe-count");
     countRecipe.textContent = `${count} recette(s)`;
 }
 
-// Met à jour dynamiquement les options visibles dans les dropdowns
+// Met à jour dynamiquement les options de filtres selon les recettes affichées
 export function updateFilters(filteredRecipes) {
     let ingredients = [], appliances = [], ustensils = [];
 
+    // On récupère les valeurs présentes dans les recettes
     filteredRecipes.forEach(recipe => {
         recipe.ingredients.forEach(ing => ingredients.push(ing.ingredient.toLowerCase()));
         appliances.push(recipe.appliance.toLowerCase());
         recipe.ustensils.forEach(u => ustensils.push(u.toLowerCase()));
     });
 
-    // Suppression des doublons avec Set
+    // On élimine les doublons avec Set
     ingredients = [...new Set(ingredients)];
     appliances = [...new Set(appliances)];
     ustensils = [...new Set(ustensils)];
 
-    // Mise à jour des listes déroulantes
+    // On met à jour chaque liste déroulante
     updateSelectOptions("ingredients-select", ingredients);
     updateSelectOptions("appliances-select", appliances);
     updateSelectOptions("ustensils-select", ustensils);
 }
 
+// Injecte dynamiquement les <li> dans un menu déroulant
 export function updateSelectOptions(selectId, options) {
-    //dom element qui conteint les toptions du dropdown
     const selectElement = document.querySelector(`#${selectId} .select-options`);
-    //vide le contenu HTML de l'élément pour supprimer toutes les anciennes options
-    selectElement.innerHTML = "";
-    //ajoute les nouvelles options
+    selectElement.innerHTML = ""; // vide les anciennes options
+
+    // Crée un <li> pour chaque nouvelle option
     options.forEach(option => {
-        //crée un nouvel élément <li> pour chaque option
         const optionElement = document.createElement("li");
-        //ajoute les classes CSS à l'élément <li>
         optionElement.classList.add("p-4", "hover:bg-customYellow", "cursor-pointer");
-        //définit le texte de l'élément <li> à l'option actuelle
         optionElement.textContent = option;
-        //ajoute l'élément <li> au conteneur des options
         selectElement.appendChild(optionElement);
     });
 }

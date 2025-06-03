@@ -2,45 +2,48 @@ import { applyFilters } from "./searchFunctions.js";
 import { updateActiveFilters } from "./filterFunctions.js";
 import { searchTag } from "../templates/tag.js";
 
-// Ajout d’un tag (ex: "concombre") dans l’interface
+// Ajout d’un tag dans l’interface
 export function addTag(tag) {
     const tagsContainer = document.getElementById("tags");
     const lowerTag = tag.toLowerCase();
 
-    // Vérifie si ce tag est déjà sélectionné
+    // Vérifie si ce tag est déjà présent pour éviter les doublons
     const existingTag = Array.from(tagsContainer.children).find(
         (element) => element.querySelector("p").textContent === lowerTag
     );
 
-    // Si ce n'est pas le cas, on l’ajoute en HTML
+    // Si le tag n'existe pas encore, on l'ajoute
     if (!existingTag) {
-        const tagHTML = searchTag(lowerTag); // génère le HTML du tag
+        const tagHTML = searchTag(lowerTag); // génère le HTML <div class="tag">...</div>
         tagsContainer.innerHTML += tagHTML;
 
-        // Ajoute l'événement de suppression (clic sur croix)
+        // On ajoute un événement à chaque croix pour pouvoir supprimer le tag
         tagsContainer.querySelectorAll(".tag").forEach(tagElement => {
             tagElement.querySelector("i").addEventListener("click", () => {
-                tagElement.remove();
-                updateSearch(); // relance le filtre après suppression
+                tagElement.remove();            // suppression du tag visuellement
+                updateSearch();                 // relance la recherche après suppression
             });
         });
 
-        // Met à jour les filtres actifs (liste de tous les tags sélectionnés)
+        // On met à jour la liste des tags actifs
         updateActiveFilters([...tagsContainer.children].map(
             el => el.querySelector("p").textContent.toLowerCase()
         ));
     }
 }
 
+// Mise à jour complète de la recherche (avec ou sans query dans le champ principal)
 export function updateSearch(query) {
-    //récupère l'élément conteneur des tags
     const tagsContainer = document.getElementById("tags");
-    //convertit les enfants du conteneur de tags en un tableau
+
+    // On récupère tous les tags actifs
     const tags = Array.from(tagsContainer.children).map(
         (element) => element.querySelector("p").textContent.toLowerCase()
     );
-    //met à jour les filtres actifs avec la liste des tags
+
+    // Mise à jour des filtres actifs
     updateActiveFilters(tags);
-    //applique les filtres aux recettes présentes dans l'élément avec l'ID "recipes"
+
+    // Relance l'affichage avec filtres actifs
     applyFilters(tags, document.getElementById("recipes"), query);
 }
