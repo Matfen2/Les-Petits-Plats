@@ -1,4 +1,6 @@
 import { displayRecipes } from "./search/showRecipes.js";
+import { searchRecipes } from "./search/searchRecipes.js";
+import { searchTags } from "./search/searchTags.js";
 import recipes from "../data/recipes.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("recipe-count").textContent = `${recipes.length} recettes`;
 
   // 2. Activation de la recherche par mots-clés
+  searchRecipes(recipes);
 
   // 3. Activation des dropdowns et tags dynamiques
+  searchTags(recipes);
 });
